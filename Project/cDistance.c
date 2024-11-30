@@ -4,12 +4,14 @@
 #define MAX 100 // Maximum number of points
 
 double compute(double x1, double y1, double x2, double y2);
+extern double testing();
 
 int main() {
 	
 	int size, i, j;
 	double x1[MAX][2], y1[MAX][2], x2[MAX][2], y2[MAX][2];
 	double z[MAX];
+	double m[MAX];
 	
 	printf("input vector length: ");
 	scanf("%d", &size);
@@ -41,12 +43,13 @@ int main() {
 	for (i=0 ; i<size; i++) {
 			// compute distance of each point
 			z[i] = compute(x1[i][0], y1[i][1], x2[i][0], y2[i][1]);
+			m[i] = testing(x1[i][0], y1[i][1], x2[i][0], y2[i][1]);
 	}
 	
 	// output first 10 elements of z
 	for (i=0 ; i<size && i<10; i++) {
 		// compute distance of each point
-		printf("%.2f", z[i]);
+		printf("%.2f", m[i]);
 		if (i<size-1 && i<9) {
 			printf(", ");
 		} 
