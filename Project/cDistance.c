@@ -97,8 +97,8 @@ void generate_random(double* arr, int size, double min, double max) {
 	int i;
 
     for (i = 0; i < size; i++) {
-        double scale = rand() / (double)RAND_MAX; // Scale: 0.0 to 1.0
-        arr[i] = min + scale * (max - min);       // Scale to desired range
+        double scale = rand() / (double)RAND_MAX; 
+        arr[i] = min + scale * (max - min);       
     }
 }
 
