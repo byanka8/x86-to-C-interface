@@ -16,12 +16,13 @@ Upon running the computations and timing of both kernels, it is evident that bot
 
 ---
 ### Screenshot: Program Output Correctness Check
-![alt text](output.png)
+![screenshot of outputs](output.png)
 - 1st Row: Output by C
 - 2nd Row: Output by Assembly
 
 Below is a sample input:
-![alt text](input.png)
+![screenshot of inputs](input.png)
 ---
 ### Short Video
+[x86-64 to C Interface Programming Project](x86-64-to-C.mp4)
 
