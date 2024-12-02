@@ -12,7 +12,6 @@ extern double testing();
 int main() {
 	
 	int size, exponent, i, j;
-	// double x1[MAX][2], y1[MAX][2], x2[MAX][2], y2[MAX][2];
 	// double z[MAX];
 	// double m[MAX];
 
@@ -24,6 +23,7 @@ int main() {
 
 	size = pow(2, exponent);
 
+	printf("size: %d\n", size);
 	double x1[size], y1[size], x2[size], y2[size];
 	double z[size];
 	double m[size];
