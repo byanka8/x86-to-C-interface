@@ -28,6 +28,10 @@ int main() {
 	double z[size];
 	double m[size];
 	
+	// variables for time
+    clock_t c_start, c_end, asm_start, asm_end;
+    double c_cpu_time_used, asm_cpu_time_used;
+	
 	// size = 4;
 	// double x1[] = {1.5, 4.0, 3.5, 2.0};
     // double x2[] = {3.0, 2.5, 2.5, 1.0};
@@ -39,10 +43,15 @@ int main() {
 	generate_random(y1, size, min, max);
 	generate_random(y2, size, min, max);
 	
+	c_start = clock();
 	for (i=0 ; i<size; i++) {
 			// compute distance of each point c
 			z[i] = compute(x1[i], y1[i], x2[i], y2[i]);
 	}
+	c_end = clock();
+	c_cpu_time_used = ((double) (c_end - c_start)) / CLOCKS_PER_SEC * 1000.0;
+	
+	printf("Execution time of C: %f ms\n", c_cpu_time_used);
 	
 	// output first 10 elements of z
 	for (i=0 ; i<size && i<10; i++) {
@@ -55,10 +64,15 @@ int main() {
 
 	printf("\n");
 
+	asm_start = clock();
 	for (i=0 ; i<size; i++) {
 			// compute distance of each point asm
 			m[i] = compute(x1[i], y1[i], x2[i], y2[i]);
 	}
+	asm_end = clock();
+	asm_cpu_time_used = ((double) (asm_end - asm_start)) / CLOCKS_PER_SEC * 1000.0;
+	
+	printf("Execution time of Assembly: %f ms\n", asm_cpu_time_used);
 
 	// output first 10 elements of mm
 	for (i=0 ; i<size && i<10; i++) {
