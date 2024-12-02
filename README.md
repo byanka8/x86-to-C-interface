@@ -16,12 +16,12 @@ Upon running the computations and timing of both kernels, it is evident that bot
 
 ---
 ### Screenshot: Program Output Correctness Check
-![alt text](image-2.png)
+![alt text](output.png)
 - 1st Row: Output by C
 - 2nd Row: Output by Assembly
 
 Below is a sample input:
-![alt text](image-1.png)
+![alt text](input.png)
 ---
 ### Short Video
 
